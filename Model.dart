@@ -1,0 +1,27 @@
+class Modelclass {
+  String? id;
+  String? image;
+  String? name;
+  String? desc;
+  String? date;
+
+  Modelclass({ this.id, this.image, this.name, this.desc, this.date});
+
+  Modelclass.fromJson(Map<String, dynamic> json) {
+    id = json['id'];
+    image = json["image"];
+    name = json['name'];
+    desc = json['desc'];
+    date = json['date'];
+  }
+
+  Map<String, dynamic> toJson() {
+    final Map<String, dynamic> data = new Map<String, dynamic>();
+    data['id'] = this.id;
+    data ["image"] = this.image;
+    data['name'] = this.name;
+    data['desc'] = this.desc;
+    data['date'] = this.date;
+    return data;
+  }
+}
